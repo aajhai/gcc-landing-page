@@ -1,586 +1,625 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GCC Career Progression Diagnostic</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .font-montserrat { font-family: 'Montserrat', sans-serif; }
-        .font-inter { font-family: 'Inter', sans-serif; }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        h1, h2, h3, h4, h5, h6, .font-headline {
-            font-family: 'Montserrat', sans-serif;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GCC Career Progression Diagnostic | Dr. Mudit Saxena</title>
+<meta name="description" content="You deliver results. You receive good feedback. You haven't been promoted. Take a free 5-minute diagnostic to discover exactly what may be holding you back." />
 
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
 
-        @layer utilities {
-            .headline-lg {
-                @apply font-headline text-[40px] leading-[48px] font-semibold tracking-[-0.01em];
-            }
-            .headline-sm {
-                @apply font-headline text-[24px] leading-[32px] font-semibold;
-            }
-            .body-lg {
-                @apply font-body text-[18px] leading-[28px] font-normal;
-            }
-            .body-md {
-                @apply font-body text-[16px] leading-[24px] font-normal;
-            }
-            .label-bold {
-                @apply font-label text-[14px] leading-[20px] font-semibold tracking-[0.05em];
-            }
-            .stat-lg {
-                @apply font-headline text-[64px] leading-[64px] font-extrabold tracking-[-0.02em];
-            }
-        }
-    
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          background: '#F8F9FF',
+          surface: '#FFFFFF',
+          'surface-tint': '#EBEEF8',
+          'surface-container': '#EBEEF8',
+          'surface-container-high': '#E5E8F2',
+          'surface-container-highest': '#DFE2EC',
+          primary: '#0D2761',
+          'primary-container': '#283E78',
+          'on-primary': '#FFFFFF',
+          'on-surface': '#181C23',
+          'on-surface-variant': '#444650',
+          outline: '#757681',
+          'outline-variant': '#C5C6D1',
+          border: '#E2E8F0',
+          'border-strong': '#C7CCDD',
+          'accent-action': '#D2331E',
+          'accent-action-hover': '#B02918',
+          'accent-decorative': '#FA543E',
+          'accent-subtle': '#FFE8E4',
+          'on-accent-subtle': '#8A2A1D',
+          gold: '#E5B15D',
+        },
+        fontFamily: {
+          headline: ['Montserrat', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+          label: ['Inter', 'sans-serif'],
+        },
+        spacing: {
+          'xs': '4px',
+          'sm': '8px',
+          'md': '16px',
+          'lg': '24px',
+          'xl': '32px',
+          '2xl': '48px',
+          '3xl': '64px',
+          '4xl': '96px',
+        },
+        maxWidth: {
+          'container': '1200px',
+        },
+        borderRadius: {
+          DEFAULT: '4px',
+          lg: '8px',
+          xl: '12px',
+        },
+        boxShadow: {
+          'soft': '0 4px 12px -2px rgba(40, 62, 120, 0.08), 0 2px 4px -1px rgba(40, 62, 120, 0.06)',
+          'card': '0 1px 3px 0 rgba(40, 62, 120, 0.05), 0 1px 2px 0 rgba(40, 62, 120, 0.03)',
+        },
+      },
+    },
+  };
+</script>
 
-        .badge-shadow {
-            box-shadow: 0 4px 6px -1px rgba(40, 62, 120, 0.1), 0 2px 4px -1px rgba(40, 62, 120, 0.06);
-        }
-    
-
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    
-    </style>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: #181C23; background: #F8F9FF; }
+  h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+  .eyebrow { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700; line-height: 16px; letter-spacing: 0.12em; text-transform: uppercase; }
+  .label-bold { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; line-height: 20px; letter-spacing: 0.05em; }
+  .caption { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 400; line-height: 16px; }
+  .body-md { font-family: 'Inter', sans-serif; font-size: 16px; line-height: 24px; }
+  .body-lg { font-family: 'Inter', sans-serif; font-size: 18px; line-height: 28px; }
+  .headline-sm { font-family: 'Montserrat', sans-serif; font-size: 24px; line-height: 32px; font-weight: 600; }
+  .headline-md { font-family: 'Montserrat', sans-serif; font-size: 32px; line-height: 40px; font-weight: 600; }
+  .headline-lg { font-family: 'Montserrat', sans-serif; font-size: 40px; line-height: 48px; font-weight: 600; letter-spacing: -0.01em; }
+  .display-lg { font-family: 'Montserrat', sans-serif; font-size: 48px; line-height: 56px; font-weight: 700; letter-spacing: -0.02em; }
+  .stat-lg { font-family: 'Montserrat', sans-serif; font-size: 64px; line-height: 64px; font-weight: 800; letter-spacing: -0.02em; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .ms-filled { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  @media (max-width: 768px) {
+    .display-lg { font-size: 36px; line-height: 44px; }
+    .headline-lg { font-size: 30px; line-height: 38px; }
+    .headline-md { font-size: 26px; line-height: 34px; }
+    .stat-lg { font-size: 48px; line-height: 48px; }
+  }
+</style>
 </head>
-<body class="bg-[#F8F9FF] text-[#181c23]">
-<!-- SECTION: hero -->
+<body class="bg-background text-on-surface antialiased">
 
-<!-- TopNavBar -->
-<nav class="w-full top-0 sticky bg-surface border-b border-outline-variant z-50">
-<div class="flex justify-between items-center px-8 h-20 max-w-[1200px] mx-auto">
-<div class="text-headline-sm font-bold text-primary tracking-tight">Executive Altitude</div>
-<div class="hidden md:flex space-x-8">
-<a class="text-on-surface-variant hover:text-primary transition-colors font-headline text-label-bold uppercase tracking-widest" href="#">Our Strategy</a>
-<a class="text-primary border-b-2 border-secondary font-bold pb-1 font-headline text-label-bold uppercase tracking-widest" href="#">Expertise</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-headline text-label-bold uppercase tracking-widest" href="#">Insights</a>
-</div>
-<a class="hidden md:inline-flex items-center justify-center px-6 py-2 bg-accent-action text-white text-label-bold font-semibold rounded hover:opacity-90 transition-opacity" href="#">Consultation</a>
-</div>
-</nav>
-<!-- Hero Section -->
-<main class="flex-grow flex items-center justify-center py-24 px-4 sm:px-8 max-w-[1200px] mx-auto w-full">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-<!-- Left Column: Content -->
-<div class="flex flex-col space-y-8">
-<div class="space-y-4">
-<p class="font-label text-eyebrow text-accent-action tracking-widest uppercase">Career Progression Gap</p>
-<h1 class="text-[40px] md:text-[48px] font-bold font-headline text-primary leading-tight tracking-tight">
-                        Delivering Results.<br/>Still Not Promoted.
-                    </h1>
-<p class="text-[16px] md:text-[18px] text-on-surface-variant font-body leading-relaxed max-w-lg">
-                        In a GCC, strong performance is necessary. It may not be sufficient. Discover in 5 minutes whether strategy, visibility, communication, sponsorship, or next-level evidence is the gap.
-                    </p>
-</div>
-<div class="space-y-4">
-<a class="inline-flex items-center justify-center px-8 py-4 bg-accent-action text-white text-label-bold font-bold rounded hover:opacity-90 transition-opacity shadow-sm w-full sm:w-auto" href="#">
-                        Start the Free Diagnostic
-                    </a>
-<p class="text-caption text-outline font-body flex items-center space-x-2">
-<span class="material-symbols-outlined text-[16px]">task_alt</span>
-<span>15 questions â¢ 5 minutes â¢ Mobile-friendly â¢ Confidential</span>
-</p>
-</div>
-<div class="pt-4 border-t border-border-strong">
-<a class="inline-flex items-center text-primary font-semibold text-body-md hover:text-secondary transition-colors group" href="#">
-                        Already know your challenge? Apply directly for a fit call
-                        <span class="material-symbols-outlined ml-1 group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-</div>
-<!-- Right Column: Visualization -->
-<div class="relative w-full h-[400px] lg:h-[500px] bg-surface rounded-xl border border-border-strong shadow-sm overflow-hidden flex items-center justify-center p-6">
-<!-- Using placeholder for image generation with data-alt for styling prompt -->
-<img alt="Career Progression Gap Visualization" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLvuEi7JzgelWOhf5RFGLPRGRS1TjQdoD-bbhS68YDwucHW9BQ811SuXUPygrQUoKyzm2edHKe79Jdi4Ds4e-kLGcb8doYCIPViHQhcnHzJ7PR7VDDreLodTV7CB4rtfJIgtYCR7LxMSrmcr2t7J92uulWubEILDxohvfDYr_NM4l9qFwpVodGHpymQED_TNixUbN9qOdVZ56_uiMsV2OH3WbDfPXrIW8ryMs_3BTbrTo61TTN08Rcm5ogQ"/>
-</div>
-</div>
-</main>
-<!-- Footer -->
-<footer class="w-full py-12 bg-surface-container border-t border-surface-tint mt-auto">
-<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-[1200px] mx-auto gap-4">
-<div class="text-headline-sm font-bold text-primary">Executive Altitude</div>
-<div class="flex space-x-6">
-<a class="text-on-surface-variant hover:text-secondary-container transition-colors font-body text-caption" href="#">Privacy Policy</a>
-<a class="text-on-surface-variant hover:text-secondary-container transition-colors font-body text-caption" href="#">Terms of Service</a>
-<a class="text-on-surface-variant hover:text-secondary-container transition-colors font-body text-caption" href="#">Leadership Council</a>
-</div>
-<div class="font-body text-caption text-on-surface-variant">Â© 2024 Executive Altitude. All rights reserved.</div>
-</div>
-</footer>
-
-<!-- SECTION: pain -->
-
-<!-- Top Navigation (Shared Component) -->
-<nav class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline flex justify-between items-center px-8 py-4 max-w-[1200px] mx-auto w-full docked full-width top-0 sticky z-50 transition-all duration-300">
-<div class="flex items-center gap-md">
-<a class="text-headline-sm font-headline font-bold text-primary dark:text-primary-fixed-dim" href="#">
-                Executive Altitude
-            </a>
-</div>
-<div class="hidden md:flex items-center gap-lg">
-<a class="text-on-surface-variant dark:text-surface-variant font-label text-label-bold hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Methodology</a>
-<a class="text-on-surface-variant dark:text-surface-variant font-label text-label-bold hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Case Studies</a>
-<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-secondary dark:border-secondary-fixed pb-1 font-label text-label-bold hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 opacity-80" href="#">Insights</a>
-<a class="text-on-surface-variant dark:text-surface-variant font-label text-label-bold hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Advisory</a>
-</div>
-<div class="flex items-center">
-<a class="bg-accent-action hover:bg-opacity-90 text-on-primary font-label text-label-bold py-sm px-lg rounded transition-colors duration-200" href="#">
-                Get Started
-            </a>
-</div>
-</nav>
-<main class="w-full">
-<!-- Problem Section -->
-<section class="py-4xl px-8 w-full max-w-container-max mx-auto">
-<div class="flex flex-col gap-xl max-w-3xl mx-auto text-center mb-3xl">
-<p class="text-eyebrow text-accent-action uppercase tracking-widest">The Core Issue</p>
-<h2 class="text-headline-lg text-primary font-headline font-semibold text-balance">
-                    The real reason strong GCC professionals don't get promoted.
-                </h2>
-<p class="text-body-lg text-on-surface-variant text-pretty leading-relaxed">
-                    You have a strong track record. Your performance ratings are good. Your manager relies on you. You've quietly taken on more scope than your title reflects. And still â the promotion hasn't come. In an India-based GCC, this is far more common than anyone says out loud.
-                </p>
-</div>
-<!-- Visualization Area -->
-<div class="mb-3xl bg-surface border border-border-strong rounded-lg shadow-sm overflow-hidden p-md group">
-<img class="w-full h-auto object-cover rounded shadow-sm opacity-90 group-hover:opacity-100 transition-opacity duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDddepZrogI_kB68ragZWLFqPsgjDcvMe-hR6jShQIWm5svYa0wqNBshhXtwxB-q2WfgkiEs8_zIhQya1dcM7_5yL7sqKUXClwNNggpwzLzziWllziV9Y9x4MKNsCToFQ_yrLkqTHxvQvtp6bRqZH16TXPS--jk0ifiEDVpB2xDG5PY-mQzhafk5pEkDXgvg4deOSBHxXsDTUymqO31WcrOfJAgO759Wet1zr-8Q174xXk_afZduuUOwj9MN25XtTWZaDFDMk7hz68"/>
-</div>
-<!-- The Gaps List (Bento Grid Style) -->
-<div class="flex flex-col gap-lg max-w-4xl mx-auto mb-2xl">
-<p class="text-eyebrow text-accent-action uppercase tracking-widest text-center mb-md">The 5 Critical Gaps</p>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
-<!-- Gap 1 -->
-<div class="bg-surface border border-border-strong rounded-lg p-xl border-l-[4px] border-l-accent-decorative hover:border-l-accent-action transition-colors duration-300 flex flex-col gap-sm">
-<div class="flex items-center gap-sm text-primary mb-sm">
-<span class="material-symbols-outlined text-[20px]" data-icon="account_tree">account_tree</span>
-<h3 class="text-headline-sm font-headline font-semibold">Strategic Value</h3>
-</div>
-<p class="text-body-md text-on-surface-variant">
-                            How your work connects to enterprise strategy.
-                        </p>
-</div>
-<!-- Gap 2 -->
-<div class="bg-surface border border-border-strong rounded-lg p-xl border-l-[4px] border-l-accent-decorative hover:border-l-accent-action transition-colors duration-300 flex flex-col gap-sm">
-<div class="flex items-center gap-sm text-primary mb-sm">
-<span class="material-symbols-outlined text-[20px]" data-icon="visibility">visibility</span>
-<h3 class="text-headline-sm font-headline font-semibold">Global Visibility</h3>
-</div>
-<p class="text-body-md text-on-surface-variant">
-                            Whether the right global decision-makers can see your contribution.
-                        </p>
-</div>
-<!-- Gap 3 -->
-<div class="bg-surface border border-border-strong rounded-lg p-xl border-l-[4px] border-l-accent-decorative hover:border-l-accent-action transition-colors duration-300 flex flex-col gap-sm">
-<div class="flex items-center gap-sm text-primary mb-sm">
-<span class="material-symbols-outlined text-[20px]" data-icon="forum">forum</span>
-<h3 class="text-headline-sm font-headline font-semibold">Executive Communication</h3>
-</div>
-<p class="text-body-md text-on-surface-variant">
-                            How you show up in senior conversations.
-                        </p>
-</div>
-<!-- Gap 4 -->
-<div class="bg-surface border border-border-strong rounded-lg p-xl border-l-[4px] border-l-accent-decorative hover:border-l-accent-action transition-colors duration-300 flex flex-col gap-sm">
-<div class="flex items-center gap-sm text-primary mb-sm">
-<span class="material-symbols-outlined text-[20px]" data-icon="handshake">handshake</span>
-<h3 class="text-headline-sm font-headline font-semibold">Strategic Sponsorship</h3>
-</div>
-<p class="text-body-md text-on-surface-variant">
-                            Whether you have active sponsorship in succession discussions.
-                        </p>
-</div>
-<!-- Gap 5 -->
-<div class="bg-surface border border-border-strong rounded-lg p-xl border-l-[4px] border-l-accent-decorative hover:border-l-accent-action transition-colors duration-300 flex flex-col gap-sm md:col-span-2">
-<div class="flex items-center gap-sm text-primary mb-sm">
-<span class="material-symbols-outlined text-[20px]" data-icon="trending_up">trending_up</span>
-<h3 class="text-headline-sm font-headline font-semibold">Next-Level Evidence</h3>
-</div>
-<p class="text-body-md text-on-surface-variant">
-                            Whether you've demonstrated readiness for the next level.
-                        </p>
-</div>
-</div>
-</div>
-<!-- Conclusion -->
-<div class="max-w-2xl mx-auto text-center mt-3xl bg-surface-tint p-lg rounded-lg">
-<p class="text-body-lg text-primary font-body font-medium italic">
-                    The diagnostic identifies which of these gaps is most likely affecting your progression.
-                </p>
-</div>
-</section>
-</main>
-<!-- Footer (Shared Component) -->
-<footer class="bg-surface-container-highest dark:bg-inverse-surface flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-[1200px] mx-auto w-full full-width border-t border-border-strong mt-4xl">
-<div class="mb-md md:mb-0">
-<p class="text-on-surface-variant dark:text-surface-variant text-caption font-body text-center md:text-left">
-                Â© 2024 Executive Altitude. All rights reserved. Precision in Leadership.
-            </p>
-</div>
-<div class="flex flex-wrap justify-center gap-md">
-<a class="text-on-surface-variant dark:text-surface-variant font-label text-label-bold hover:text-primary dark:hover:text-primary-fixed transition-colors focus:underline" href="#">Privacy Policy</a>
-<a class="text-on-surface-variant dark:text-surface-variant font-label text-label-bold hover:text-primary dark:hover:text-primary-fixed transition-colors focus:underline" href="#">Terms of Service</a>
-<a class="text-on-surface-variant dark:text-surface-variant font-label text-label-bold hover:text-primary dark:hover:text-primary-fixed transition-colors focus:underline" href="#">Executive Disclosure</a>
-<a class="text-on-surface-variant dark:text-surface-variant font-label text-label-bold hover:text-primary dark:hover:text-primary-fixed transition-colors focus:underline" href="#">Contact</a>
-</div>
-</footer>
-
-<!-- SECTION: dimensions -->
-
-<!-- Navigation Shell (TopNavBar) -->
-<header class="bg-background dark:bg-on-surface docked full-width top-0 bg-surface-container-low dark:bg-inverse-surface flat no shadows flex justify-between items-center px-8 py-4 max-w-container-max mx-auto w-full border-b border-surface-variant md:border-none">
-<div class="text-headline-sm font-headline font-bold text-primary dark:text-primary-fixed">
-            Executive Altitude
-        </div>
-<nav class="hidden md:flex gap-8">
-<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Expertise</a>
-<a class="text-primary dark:text-primary-fixed border-b-2 border-secondary-container font-bold pb-1 hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Solutions</a>
-<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Insights</a>
-<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">About</a>
-</nav>
-<button class="hidden md:block bg-accent-action text-on-primary font-label label-bold px-lg py-sm rounded transition hover:bg-opacity-90">
-            Book Consultation
-        </button>
-</header>
-<!-- Main Content Canvas -->
-<main class="py-4xl px-md md:px-lg max-w-container-max mx-auto">
-<!-- Section Header -->
-<div class="mb-3xl text-center md:text-left max-w-3xl">
-<h2 class="headline-lg text-primary-container">What the diagnostic measures.</h2>
-<p class="body-lg text-on-surface-variant mt-md">A rigorous evaluation of your executive positioning, designed to identify precisely where your strategic impact is resonating and where it falls short.</p>
-</div>
-<!-- Metric Cards Grid (Bento/Asymmetric Style) -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg mb-4xl">
-<!-- Card 1 (Span 2 cols on tablet/desktop for asymmetry) -->
-<div class="bg-surface border border-border-strong rounded-lg p-xl flex flex-col md:col-span-2 lg:col-span-2 hover:border-primary-container transition-colors duration-300">
-<span class="stat-lg text-accent-decorative mb-md">01</span>
-<h3 class="headline-sm text-primary-container mb-sm">Strategic Value and Enterprise Orientation</h3>
-<p class="body-md text-on-surface-variant">Are you seen as shaping priorities â or only executing them?</p>
-</div>
-<!-- Card 2 -->
-<div class="bg-surface border border-border-strong rounded-lg p-xl flex flex-col hover:border-primary-container transition-colors duration-300">
-<span class="stat-lg text-accent-decorative mb-md">02</span>
-<h3 class="headline-sm text-primary-container mb-sm">Global Visibility and Strategic Access</h3>
-<p class="body-md text-on-surface-variant">Do the right decision-makers know your contribution and your potential?</p>
-</div>
-<!-- Card 3 -->
-<div class="bg-surface border border-border-strong rounded-lg p-xl flex flex-col hover:border-primary-container transition-colors duration-300">
-<span class="stat-lg text-accent-decorative mb-md">03</span>
-<h3 class="headline-sm text-primary-container mb-sm">Executive Communication and Presence</h3>
-<p class="body-md text-on-surface-variant">Do you communicate judgment, trade-offs and implications â or just updates?</p>
-</div>
-<!-- Card 4 -->
-<div class="bg-surface border border-border-strong rounded-lg p-xl flex flex-col hover:border-primary-container transition-colors duration-300">
-<span class="stat-lg text-accent-decorative mb-md">04</span>
-<h3 class="headline-sm text-primary-container mb-sm">Influence, Sponsorship and Organisational Navigation</h3>
-<p class="body-md text-on-surface-variant">Do you have advocates who will put your name forward in a succession discussion?</p>
-</div>
-<!-- Card 5 (Span 2 cols on tablet, 1 on desktop) -->
-<div class="bg-surface border border-border-strong rounded-lg p-xl flex flex-col md:col-span-2 lg:col-span-1 hover:border-primary-container transition-colors duration-300">
-<span class="stat-lg text-accent-decorative mb-md">05</span>
-<h3 class="headline-sm text-primary-container mb-sm">Scalable Leadership and Next-Role Evidence</h3>
-<p class="body-md text-on-surface-variant">Have you already demonstrated readiness for the next level â or only excelled at this one?</p>
-</div>
-</div>
-<!-- Summary Box -->
-<div class="bg-surface-tint rounded-lg p-xl md:p-2xl border border-surface-dim relative overflow-hidden">
-<!-- Abstract decorative shape indicating structure -->
-<div class="absolute -right-12 -top-12 opacity-10 pointer-events-none">
-<svg fill="none" height="200" viewbox="0 0 24 24" width="200" xmlns="http://www.w3.org/2000/svg">
-<path class="text-primary-container" d="M12 2L2 22H22L12 2Z" fill="currentColor"></path>
-</svg>
-</div>
-<div class="relative z-10">
-<h3 class="headline-sm text-primary-container mb-lg">What you'll receive</h3>
-<ul class="space-y-md">
-<li class="flex items-start">
-<span class="material-symbols-outlined text-accent-decorative mr-sm flex-shrink-0 mt-xs" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="body-md text-on-surface">Overall score (0-100) benchmarked against executive peers.</span>
-</li>
-<li class="flex items-start">
-<span class="material-symbols-outlined text-accent-decorative mr-sm flex-shrink-0 mt-xs" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="body-md text-on-surface">Identification of your strongest dimension of executive presence.</span>
-</li>
-<li class="flex items-start">
-<span class="material-symbols-outlined text-accent-decorative mr-sm flex-shrink-0 mt-xs" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="body-md text-on-surface">Analysis of your primary promotion gap and blind spots.</span>
-</li>
-<li class="flex items-start">
-<span class="material-symbols-outlined text-accent-decorative mr-sm flex-shrink-0 mt-xs" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="body-md text-on-surface">Three immediately actionable recommended actions for impact.</span>
-</li>
-<li class="flex items-start">
-<span class="material-symbols-outlined text-accent-decorative mr-sm flex-shrink-0 mt-xs" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="body-md text-on-surface">Result interpretation tailored to your specific career stage.</span>
-</li>
-</ul>
-</div>
-</div>
-</main>
-<!-- Footer Shell -->
-<footer class="bg-surface-container-highest dark:bg-inverse-surface text-on-surface dark:text-inverse-on-surface font-body text-caption full-width bg-surface-container-highest dark:bg-inverse-surface flat no shadows flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-container-max mx-auto w-full mt-4xl border-t border-surface-dim">
-<div class="mb-md md:mb-0">
-<span class="text-label-bold font-headline font-bold text-primary dark:text-primary-fixed">Executive Altitude</span>
-</div>
-<div class="flex flex-col md:flex-row gap-md items-center mb-md md:mb-0">
-<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Privacy Policy</a>
-<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Terms of Service</a>
-<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Contact</a>
-</div>
-<div>
-            Â© 2024 Executive Altitude. All rights reserved.
-        </div>
-</footer>
-
-<!-- SECTION: about -->
-
-<!-- Top Navigation -->
-<nav class="bg-surface dark:bg-surface-dim w-full top-0 sticky border-b border-outline-variant dark:border-outline z-50">
-<div class="flex justify-between items-center px-8 h-20 max-w-[1200px] mx-auto">
-<div class="text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">
-                Executive Altitude
-            </div>
-<div class="hidden md:flex gap-8 items-center">
-<a class="font-headline text-label-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all" href="#">Our Strategy</a>
-<a class="font-headline text-label-bold uppercase tracking-widest text-primary border-b-2 border-secondary font-bold pb-1 opacity-80 duration-150" href="#">Expertise</a>
-<a class="font-headline text-label-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all" href="#">Insights</a>
-</div>
-<div class="hidden md:block">
-<a class="bg-accent-action text-on-primary font-label font-bold text-sm px-6 py-3 rounded hover:bg-opacity-90 transition-colors" href="#">Consultation</a>
-</div>
-<div class="md:hidden">
-<span class="material-symbols-outlined text-primary cursor-pointer">menu</span>
-</div>
-</div>
-</nav>
-<!-- Main Content Section -->
-<main class="w-full py-4xl px-8 bg-surface">
-<div class="max-w-container-max mx-auto">
-<div class="mb-2xl text-center md:text-left">
-<h2 class="font-headline text-headline-lg lg:text-display-lg text-primary-container font-semibold tracking-tight">Built by someone who sat in the chair.</h2>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-2xl lg:gap-3xl items-start">
-<!-- Left Column: Profile & Credentials -->
-<div class="lg:col-span-5 flex flex-col items-center">
-<div class="relative mb-lg w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-surface shadow-lg">
-<img alt="Executive Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLuJBKCgAMLXv1GLX_a74SZm7b4qAHbOVGTxlQSIkPmWjI5YirCcL3tauD4bmKpmzesQVJSYr_9TZebQxydR1zI6klEJmLyKnaxuET7PSr8fEqjD4pL84Zodss3-9JykHZgknHFvzH3OWs7FEUJssfMBG_ZNhHnTi833AXjGt3ZJ9A6P2YtDs1wp6uQgencBPWL4DgwnopVoMA2m8CxBCNK5HmR1rZiZIz0hVlrUjKiCTWTr7pWiIczJ2dE"/>
-</div>
-<!-- Credential Badges Box -->
-<div class="bg-surface border border-border-strong rounded-lg p-lg w-full max-w-md badge-shadow">
-<h3 class="text-center font-body text-body-md text-on-surface-variant mb-md font-medium">Leadership Coaching Credentials</h3>
-<div class="flex justify-center gap-sm md:gap-md mb-md">
-<!-- Badge 1: ICF-PCC -->
-<div class="relative w-16 h-20 md:w-20 md:h-24 flex items-center justify-center">
-<svg class="w-full h-full drop-shadow-sm" viewbox="0 0 100 120">
-<path d="M50 0 L100 15 L100 70 C100 95 50 120 50 120 C50 120 0 95 0 70 L0 15 Z" fill="url(#goldGrad)" stroke="#E5B15D" stroke-width="2"></path>
-<defs>
-<lineargradient id="goldGrad" x1="0%" x2="100%" y1="0%" y2="100%">
-<stop offset="0%" stop-color="#FDE68A"></stop>
-<stop offset="50%" stop-color="#F59E0B"></stop>
-<stop offset="100%" stop-color="#FA543E"></stop>
-</lineargradient>
-</defs>
-</svg>
-<span class="absolute font-headline text-xs md:text-sm font-bold text-white text-center leading-tight">ICF-PCC</span>
-</div>
-<!-- Badge 2: Trained by -->
-<div class="relative w-16 h-20 md:w-20 md:h-24 flex items-center justify-center">
-<svg class="w-full h-full drop-shadow-sm" viewbox="0 0 100 120">
-<path d="M50 0 L100 15 L100 70 C100 95 50 120 50 120 C50 120 0 95 0 70 L0 15 Z" fill="#283E78" stroke="#0D2761" stroke-width="2"></path>
-</svg>
-<span class="absolute font-headline text-[10px] md:text-xs font-semibold text-white text-center leading-tight px-1">Trained by<br/>John<br/>Mattone</span>
-</div>
-<!-- Badge 3: TEDx -->
-<div class="relative w-16 h-20 md:w-20 md:h-24 flex items-center justify-center">
-<svg class="w-full h-full drop-shadow-sm" viewbox="0 0 100 120">
-<path d="M50 0 L100 15 L100 70 C100 95 50 120 50 120 C50 120 0 95 0 70 L0 15 Z" fill="#FA543E" stroke="#D2331E" stroke-width="2"></path>
-</svg>
-<span class="absolute font-headline text-xs md:text-sm font-bold text-white text-center leading-tight">TEDx<br/>Speaker</span>
-</div>
-<!-- Badge 4: MBA -->
-<div class="relative w-16 h-20 md:w-20 md:h-24 flex items-center justify-center">
-<svg class="w-full h-full drop-shadow-sm" viewbox="0 0 100 120">
-<path d="M50 0 L100 15 L100 70 C100 95 50 120 50 120 C50 120 0 95 0 70 L0 15 Z" fill="#0D2761" stroke="#283E78" stroke-width="2"></path>
-</svg>
-<span class="absolute font-headline text-[10px] md:text-xs font-semibold text-white text-center leading-tight">MBA â<br/>SPJIMR</span>
-</div>
-</div>
-<div class="flex items-center justify-center gap-xs text-on-surface-variant opacity-80 mt-sm">
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body text-caption">Verified by Executive Altitude</span>
-</div>
-</div>
-</div>
-<!-- Right Column: Details & Quote -->
-<div class="lg:col-span-7 flex flex-col justify-center">
-<ul class="space-y-md mb-2xl">
-<li class="flex items-start gap-md">
-<span class="material-symbols-outlined text-accent-decorative mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body text-body-lg text-on-surface">30+ years as a global CXO across five countries</span>
-</li>
-<li class="flex items-start gap-md">
-<span class="material-symbols-outlined text-accent-decorative mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body text-body-lg text-on-surface">ICF-PCC certified â one of the highest coaching credentials awarded globally</span>
-</li>
-<li class="flex items-start gap-md">
-<span class="material-symbols-outlined text-accent-decorative mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body text-body-lg text-on-surface">Trained personally by John Mattone, Steve Jobs' executive coach</span>
-</li>
-<li class="flex items-start gap-md">
-<span class="material-symbols-outlined text-accent-decorative mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body text-body-lg text-on-surface">TEDx speaker Â· MBA from SPJIMR</span>
-</li>
-<li class="flex items-start gap-md">
-<span class="material-symbols-outlined text-accent-decorative mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body text-body-lg text-on-surface">10,000+ leaders coached across technology, finance, operations, risk, and enterprise functions</span>
-</li>
-<li class="flex items-start gap-md">
-<span class="material-symbols-outlined text-accent-decorative mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body text-body-lg text-on-surface">Mentees now in CXO roles at Google, Barclays, Shell, JP Morgan, Citi and Reliance</span>
-</li>
-</ul>
-<!-- Closing Quote Block -->
-<div class="bg-surface-tint rounded-lg p-xl border-l-4 border-primary">
-<p class="font-body text-body-lg italic text-primary-container leading-relaxed">
-                            "He knows what a global VP looks for when reviewing a promotion slate. He knows because he was that VP for two decades â and because he has spent the last decade helping GCC leaders close the gap between strong performance and visible leadership."
-                        </p>
-</div>
-</div>
-</div>
-</div>
-</main>
-<!-- Footer -->
-<footer class="bg-surface-container dark:bg-inverse-surface w-full py-12 bg-surface-tint dark:bg-surface-container-highest flat no shadows">
-<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-[1200px] mx-auto gap-4">
-<div class="text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">
-                Executive Altitude
-            </div>
-<div class="flex gap-6">
-<a class="font-body text-caption text-on-surface-variant hover:text-secondary-container transition-colors hover:underline decoration-secondary decoration-2" href="#">Privacy Policy</a>
-<a class="font-body text-caption text-on-surface-variant hover:text-secondary-container transition-colors hover:underline decoration-secondary decoration-2" href="#">Terms of Service</a>
-<a class="font-body text-caption text-on-surface-variant hover:text-secondary-container transition-colors hover:underline decoration-secondary decoration-2" href="#">Leadership Council</a>
-</div>
-<div class="font-body text-caption text-on-surface dark:text-inverse-on-surface">
-                Â© 2024 Executive Altitude. All rights reserved.
-            </div>
-</div>
-</footer>
-
-<!-- SECTION: proof -->
-
-<section class="py-4xl px-lg md:px-2xl w-full max-w-container-max mx-auto">
-<div class="mb-3xl text-center">
-<h2 class="font-headline font-semibold text-[32px] md:text-[40px] leading-tight text-primary-container max-w-3xl mx-auto">
-                What GCC professionals say after working with Mudit.
-            </h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
-<!-- Card 1 -->
-<div class="bg-surface rounded-lg border border-border p-xl flex flex-col justify-between">
-<div>
-<span class="text-[64px] leading-[40px] text-accent-decorative font-headline font-bold block mb-md">"</span>
-<p class="font-body text-body-lg text-on-surface-variant italic mb-xl">
-                        What makes him stand out is the rare blend of real CXO experience and authentic coaching expertise. He focuses on both mindset and skill-building through action.
-                    </p>
-</div>
-<div class="flex items-center gap-md pt-lg border-t border-surface-tint">
-<img alt="Sachin Badole Testimonial" class="w-16 h-16 rounded-full object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida/AP1WRLuH3CZ66vGw1YG4N14-DYE8oPBU3Uxbpa2McT4oBTnDk55cMc4tfSN-KrN9r9QKVTa5hS0Eok1G4GNTJlxCG538-4Rf0QWoC93w4ThYSGysxzkkKw5crJv7dwgpN1ZI5Z26ezX1eVB9LBRGDesfXevvCcJjIu-dqtzi-Xe3IwtbjY5JS8U4pOz_W0hLgSa4elNVUWEnzxH7ERip5n7mNLKxgxYXAdQ-nNTE_DE-GpMmEbYczn89rBLGSas"/>
-<div>
-<p class="font-headline font-bold text-primary-container">Sachin Badole</p>
-<p class="font-label text-label-bold font-semibold text-on-surface-variant">Senior Director of Engineering, Tenstorrent</p>
-</div>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="bg-surface rounded-lg border border-border p-xl flex flex-col justify-between">
-<div>
-<span class="text-[64px] leading-[40px] text-accent-decorative font-headline font-bold block mb-md">"</span>
-<p class="font-body text-body-lg text-on-surface-variant italic mb-xl">
-                        There will be many blind spots in our career which we will be unaware of. His coaching took me from Unconscious Incompetence to Conscious Competence â a journey every aspiring CXO needs.
-                    </p>
-</div>
-<div class="flex items-center gap-md pt-lg border-t border-surface-tint">
-<div class="w-16 h-16 rounded-full bg-surface-container overflow-hidden shadow-sm flex-shrink-0">
-<img class="w-full h-full object-cover" data-alt="A professional, high-end corporate headshot of a mature Indian male executive in a sharp business suit, set against a clean, bright minimalist background. The lighting is soft, natural, and high-key, emphasizing a serious, analytical, and credible Corporate Modern aesthetic suitable for a leadership consulting firm. The color palette focuses on deep navy and crisp whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgUw6Sym9W76IdumSXLRfpmX523ugaJB50qF_N_gWUfX7gb1SXrvuTGIUsGr7eb7GgfwKVOVV3NWV0r1pn9Y4rJCmcsm9Vn0kFanmpeXStPRtaD6Fwmshpd5yRRn8PA6TzNjUUludVaaC1PtAF9h7m-jUkoanI78IhsMsPEBMvOZbbsaEPuR6jjeh67S9vXMjcthFq5nmpLM4DL_bFFOs_BJyhbiyqHAFOxQUc8CXoKUjSQPgIRdRtD_IymBCmphGrLdhUAMu3lrg"/>
-</div>
-<div>
-<p class="font-headline font-bold text-primary-container">Mahesh Ranganatha</p>
-<p class="font-label text-label-bold font-semibold text-on-surface-variant">SAP S/4 HANA Specialist</p>
-</div>
-</div>
-</div>
-<!-- Card 3 -->
-<div class="bg-surface rounded-lg border border-border p-xl flex flex-col justify-between">
-<div>
-<span class="text-[64px] leading-[40px] text-accent-decorative font-headline font-bold block mb-md">"</span>
-<p class="font-body text-body-lg text-on-surface-variant italic mb-xl">
-                        I found myself unsure of how to translate technical skill into executive presence, influence, and income growth. His coaching helped me clarify my leadership narrative and command rooms with confidence.
-                    </p>
-</div>
-<div class="flex items-center gap-md pt-lg border-t border-surface-tint">
-<div class="w-16 h-16 rounded-full bg-surface-container overflow-hidden shadow-sm flex-shrink-0">
-<img class="w-full h-full object-cover" data-alt="A professional, high-end corporate headshot of a distinguished Indian male executive wearing a tailored dark navy suit and white shirt, set against a well-lit, sterile office environment with subtle structural lines. The mood is authoritative and intellectual, heavily leaning into a Corporate Modern, high-contrast, data-dense aesthetic. Lighting is precise and shadowless." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5jc9O7-YDFuc4cXxcpRFuDoZ0HK2U5ceIfAeEDdX0LXWSs9QLgqof6JQ4VjOXtminbdhrHDnm-fHq2AAwgYOLK9Dnm8zXEEfY8jTjgHbzxbmHhqJJlyzy1eOcuHk3CucmNoK57sKRWn2nufOyyu5GG1-TJGJUQR9akeMjNUrCXwrKaXmVpoQqL2Y5stUfRF_W1XAzZWn7-VC9E8gx-7FirJridrUNt5EMGJw51R6rENXPbt16ZiwPm4BAexLFpavz4R12d5XsvI0"/>
-</div>
-<div>
-<p class="font-headline font-bold text-primary-container">Gautam Bhat</p>
-<p class="font-label text-label-bold font-semibold text-on-surface-variant">Sr. Program Manager, SAP Ariba, Capgemini</p>
-</div>
-</div>
-</div>
-<!-- Card 4 -->
-<div class="bg-surface rounded-lg border border-border p-xl flex flex-col justify-between">
-<div>
-<span class="text-[64px] leading-[40px] text-accent-decorative font-headline font-bold block mb-md">"</span>
-<p class="font-body text-body-lg text-on-surface-variant italic mb-xl">
-                        He helped me gain clarity, build confidence, and take meaningful steps towards achieving my goals. Anyone who works with Mudit will benefit greatly.
-                    </p>
-</div>
-<div class="flex items-center gap-md pt-lg border-t border-surface-tint">
-<div class="w-16 h-16 rounded-full bg-surface-container overflow-hidden shadow-sm flex-shrink-0">
-<img class="w-full h-full object-cover" data-alt="A professional, high-end corporate headshot of a confident Indian female executive in elegant business attire, set against a pristine, minimalist white and grey background. The image projects institutional authority and analytical rigor, perfectly aligning with a Corporate Modern aesthetic. The lighting is sophisticated and flat, removing deep shadows for a clean, trustworthy look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACkNOUgoVrQXaJH2tSzZ4PMyzdlSN-99W1PsvSyHjiZnUQAv6ZUFWp8NQaxAlnZyIGSI1OzrlpgLpbjNCUkUmwEsRXBCqpMbZGz-hmvq4T43ZIDnW_BxXinLFw8OJN8E2l-6VJQKerYKwAj-tKSdo_pUyfw_EGX_ujSvobbZ1TBZHDXFgTVQCpJmHKm-FLeM3e8cYHf2CcIuPy5PuxwoiylYc_9O-Y3Y51Cwbrs_nlVqQ478fex5WmBjeHokf_m-HJIa34S89qAY8"/>
-</div>
-<div>
-<p class="font-headline font-bold text-primary-container">Deepa K C</p>
-<p class="font-label text-label-bold font-semibold text-on-surface-variant">Head of Infrastructure and Security</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-
-<!-- SECTION: cta -->
-<section class="py-20 bg-gray-50">
-    <div class="max-w-5xl mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-gray-200 text-gray-500 p-10 rounded-lg border border-gray-300">
-                <h3 class="text-2xl font-bold mb-4 font-montserrat">Option A: Wait</h3>
-                <p class="font-inter">Hope the next review cycle is different. Keep delivering. Keep being overlooked. Watch another peer get promoted.</p>
-            </div>
-            <div class="bg-white p-10 rounded-lg border-2 border-red-600 shadow-xl">
-                <h3 class="text-2xl font-bold mb-4 font-montserrat text-blue-900">Option B: Find Out</h3>
-                <p class="font-inter text-gray-700 mb-6">Spend 5 minutes discovering exactly which of the 5 gaps is holding you back. Get a clear read on your GCC promotion readiness.</p>
-                <a href="#" class="inline-block bg-red-600 text-white font-bold py-3 px-8 rounded hover:bg-red-700 transition">Start the Free Diagnostic</a>
-            </div>
-        </div>
+<!-- ============ NAV ============ -->
+<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-outline-variant">
+  <div class="max-w-container mx-auto flex items-center justify-between px-lg lg:px-2xl h-[72px]">
+    <a href="#" class="flex items-center gap-sm">
+      <span class="headline-sm text-primary tracking-tight">CXO Hive</span>
+    </a>
+    <div class="hidden md:flex items-center gap-xl">
+      <a href="#diagnostic" class="label-bold uppercase text-on-surface-variant hover:text-primary transition">The Diagnostic</a>
+      <a href="#about" class="label-bold uppercase text-on-surface-variant hover:text-primary transition">About</a>
+      <a href="#proof" class="label-bold uppercase text-on-surface-variant hover:text-primary transition">Testimonials</a>
     </div>
+    <a href="#final-cta" class="hidden md:inline-flex items-center px-lg py-sm bg-accent-action text-white label-bold rounded hover:bg-accent-action-hover transition">
+      Start Diagnostic
+    </a>
+    <button class="md:hidden text-primary" aria-label="Menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+</nav>
+
+<!-- ============ SECTION 1 — HERO ============ -->
+<section class="w-full">
+  <div class="max-w-container mx-auto px-lg lg:px-2xl py-3xl lg:py-4xl">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-2xl lg:gap-3xl items-center">
+      <div class="flex flex-col gap-xl">
+        <p class="eyebrow text-accent-action">Career Progression Gap</p>
+        <h1 class="display-lg text-primary">Delivering Results.<br />Still Not Promoted.</h1>
+        <div class="flex flex-col gap-md">
+          <p class="body-lg text-on-surface-variant max-w-xl">In a GCC, strong performance is necessary. It may not be sufficient.</p>
+          <p class="body-lg text-on-surface-variant max-w-xl">Discover in 5 minutes whether strategy, visibility, communication, sponsorship, or next-level evidence is the gap.</p>
+        </div>
+        <div class="flex flex-col gap-md pt-sm">
+          <a href="#final-cta" class="inline-flex items-center justify-center px-xl py-md bg-accent-action text-white label-bold rounded hover:bg-accent-action-hover transition shadow-soft w-full sm:w-auto sm:self-start">
+            Start the Free Diagnostic
+            <span class="material-symbols-outlined ml-sm text-[20px]">arrow_forward</span>
+          </a>
+          <p class="caption text-outline flex items-center gap-sm">
+            <span class="material-symbols-outlined text-[16px] text-accent-decorative ms-filled">task_alt</span>
+            15 questions &middot; 5 minutes &middot; Mobile-friendly &middot; Confidential
+          </p>
+        </div>
+        <div class="pt-md border-t border-border">
+          <a href="#" class="inline-flex items-center label-bold text-primary hover:text-accent-action transition group">
+            Already know your challenge? Apply directly for a fit call
+            <span class="material-symbols-outlined ml-xs text-[18px] group-hover:translate-x-1 transition">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="bg-primary-container rounded-lg shadow-soft overflow-hidden p-xl">
+          <div class="text-white">
+            <p class="eyebrow text-accent-decorative mb-md">GCC Promotion Readiness Assessment</p>
+            <div class="flex items-baseline gap-md mb-xs">
+              <span class="stat-lg text-white">54</span>
+              <span class="headline-sm text-white/60">/ 100</span>
+            </div>
+            <p class="caption text-white/70 mb-xl">Status: Developing &mdash; Strategic Gaps Identified</p>
+            <div class="space-y-md">
+              <!-- Bar 1 -->
+              <div>
+                <div class="flex justify-between mb-xs">
+                  <span class="caption text-white/90">Strategic Value</span>
+                  <span class="caption text-white font-semibold">78%</span>
+                </div>
+                <div class="h-[6px] bg-white/10 rounded-full overflow-hidden">
+                  <div class="h-full bg-accent-decorative rounded-full" style="width: 78%"></div>
+                </div>
+              </div>
+              <!-- Bar 2 -->
+              <div>
+                <div class="flex justify-between mb-xs">
+                  <span class="caption text-white/90">Global Visibility</span>
+                  <span class="caption text-white font-semibold">42%</span>
+                </div>
+                <div class="h-[6px] bg-white/10 rounded-full overflow-hidden">
+                  <div class="h-full bg-accent-decorative rounded-full" style="width: 42%"></div>
+                </div>
+              </div>
+              <!-- Bar 3 -->
+              <div>
+                <div class="flex justify-between mb-xs">
+                  <span class="caption text-white/90">Executive Communication</span>
+                  <span class="caption text-white font-semibold">65%</span>
+                </div>
+                <div class="h-[6px] bg-white/10 rounded-full overflow-hidden">
+                  <div class="h-full bg-accent-decorative rounded-full" style="width: 65%"></div>
+                </div>
+              </div>
+              <!-- Bar 4 -->
+              <div>
+                <div class="flex justify-between mb-xs">
+                  <span class="caption text-white/90">Sponsorship &amp; Influence</span>
+                  <span class="caption text-white font-semibold">31%</span>
+                </div>
+                <div class="h-[6px] bg-white/10 rounded-full overflow-hidden">
+                  <div class="h-full bg-accent-decorative rounded-full" style="width: 31%"></div>
+                </div>
+              </div>
+              <!-- Bar 5 -->
+              <div>
+                <div class="flex justify-between mb-xs">
+                  <span class="caption text-white/90">Next-Level Evidence</span>
+                  <span class="caption text-white font-semibold">55%</span>
+                </div>
+                <div class="h-[6px] bg-white/10 rounded-full overflow-hidden">
+                  <div class="h-full bg-accent-decorative rounded-full" style="width: 55%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-xl pt-md border-t border-white/10">
+              <p class="caption text-white/50 uppercase tracking-widest">Sample result &mdash; illustrative</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
+<!-- ============ SECTION 2 — PAIN ============ -->
+<section class="w-full bg-surface-tint">
+  <div class="max-w-container mx-auto px-lg lg:px-2xl py-4xl">
+    <div class="max-w-3xl mx-auto text-center flex flex-col gap-lg mb-3xl">
+      <p class="eyebrow text-accent-action">The Core Issue</p>
+      <h2 class="headline-lg text-primary">The real reason strong GCC professionals don't get promoted.</h2>
+      <div class="flex flex-col gap-md text-left md:text-center">
+        <p class="body-lg text-on-surface-variant">
+          You have a strong track record. Your performance ratings are good. Your manager relies on you. You've quietly taken on more scope than your title reflects. And still &mdash; the promotion hasn't come.
+        </p>
+        <p class="body-lg text-on-surface-variant">
+          In an India-based GCC, this is far more common than anyone says out loud.
+        </p>
+      </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <p class="eyebrow text-accent-action text-center mb-lg">The 5 Critical Gaps</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+        <!-- Gap 1 -->
+        <div class="bg-white border border-border rounded-lg p-xl border-l-4 border-l-accent-decorative">
+          <div class="flex items-center gap-sm text-primary mb-sm">
+            <span class="material-symbols-outlined text-[22px] text-accent-decorative">account_tree</span>
+            <h3 class="headline-sm">Strategic Value</h3>
+          </div>
+          <p class="body-md text-on-surface-variant">How your work connects to enterprise strategy.</p>
+        </div>
+        <!-- Gap 2 -->
+        <div class="bg-white border border-border rounded-lg p-xl border-l-4 border-l-accent-decorative">
+          <div class="flex items-center gap-sm text-primary mb-sm">
+            <span class="material-symbols-outlined text-[22px] text-accent-decorative">visibility</span>
+            <h3 class="headline-sm">Global Visibility</h3>
+          </div>
+          <p class="body-md text-on-surface-variant">Whether the right global decision-makers can see your contribution.</p>
+        </div>
+        <!-- Gap 3 -->
+        <div class="bg-white border border-border rounded-lg p-xl border-l-4 border-l-accent-decorative">
+          <div class="flex items-center gap-sm text-primary mb-sm">
+            <span class="material-symbols-outlined text-[22px] text-accent-decorative">forum</span>
+            <h3 class="headline-sm">Executive Communication</h3>
+          </div>
+          <p class="body-md text-on-surface-variant">How you show up in senior conversations.</p>
+        </div>
+        <!-- Gap 4 -->
+        <div class="bg-white border border-border rounded-lg p-xl border-l-4 border-l-accent-decorative">
+          <div class="flex items-center gap-sm text-primary mb-sm">
+            <span class="material-symbols-outlined text-[22px] text-accent-decorative">handshake</span>
+            <h3 class="headline-sm">Strategic Sponsorship</h3>
+          </div>
+          <p class="body-md text-on-surface-variant">Whether you have active sponsorship in succession discussions.</p>
+        </div>
+        <!-- Gap 5 -->
+        <div class="md:col-span-2 bg-white border border-border rounded-lg p-xl border-l-4 border-l-accent-decorative">
+          <div class="flex items-center gap-sm text-primary mb-sm">
+            <span class="material-symbols-outlined text-[22px] text-accent-decorative">trending_up</span>
+            <h3 class="headline-sm">Next-Level Evidence</h3>
+          </div>
+          <p class="body-md text-on-surface-variant">Whether you've already demonstrated readiness for the next level.</p>
+        </div>
+      </div>
+
+      <div class="max-w-2xl mx-auto text-center mt-2xl">
+        <p class="body-lg text-primary font-medium italic">
+          The diagnostic identifies which of these gaps is most likely affecting your progression &mdash; in language that reflects the reality of senior GCC careers in India.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 3 — THE DIAGNOSTIC ============ -->
+<section id="diagnostic" class="w-full">
+  <div class="max-w-container mx-auto px-lg lg:px-2xl py-4xl">
+    <div class="max-w-3xl mb-3xl">
+      <p class="eyebrow text-accent-action mb-md">What Gets Measured</p>
+      <h2 class="headline-lg text-primary mb-md">What the diagnostic measures.</h2>
+      <p class="body-lg text-on-surface-variant">A rigorous evaluation of your executive positioning, designed to identify precisely where your strategic impact is resonating and where it falls short.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg mb-3xl">
+      <!-- Dim 1 (wide) -->
+      <div class="bg-white border border-border rounded-lg p-xl md:col-span-2 lg:col-span-2 hover:border-primary-container transition">
+        <span class="stat-lg text-accent-decorative block mb-md">01</span>
+        <h3 class="headline-sm text-primary mb-sm">Strategic Value and Enterprise Orientation</h3>
+        <p class="body-md text-on-surface-variant italic">Are you seen as shaping priorities &mdash; or only executing them?</p>
+      </div>
+      <!-- Dim 2 -->
+      <div class="bg-white border border-border rounded-lg p-xl hover:border-primary-container transition">
+        <span class="stat-lg text-accent-decorative block mb-md">02</span>
+        <h3 class="headline-sm text-primary mb-sm">Global Visibility and Strategic Access</h3>
+        <p class="body-md text-on-surface-variant italic">Do the right decision-makers know your contribution and your potential?</p>
+      </div>
+      <!-- Dim 3 -->
+      <div class="bg-white border border-border rounded-lg p-xl hover:border-primary-container transition">
+        <span class="stat-lg text-accent-decorative block mb-md">03</span>
+        <h3 class="headline-sm text-primary mb-sm">Executive Communication and Presence</h3>
+        <p class="body-md text-on-surface-variant italic">Do you communicate judgment, trade-offs and implications &mdash; or just updates?</p>
+      </div>
+      <!-- Dim 4 -->
+      <div class="bg-white border border-border rounded-lg p-xl hover:border-primary-container transition">
+        <span class="stat-lg text-accent-decorative block mb-md">04</span>
+        <h3 class="headline-sm text-primary mb-sm">Influence, Sponsorship and Organisational Navigation</h3>
+        <p class="body-md text-on-surface-variant italic">Do you have advocates who will put your name forward in a succession discussion?</p>
+      </div>
+      <!-- Dim 5 (wide on tablet) -->
+      <div class="bg-white border border-border rounded-lg p-xl md:col-span-2 lg:col-span-1 hover:border-primary-container transition">
+        <span class="stat-lg text-accent-decorative block mb-md">05</span>
+        <h3 class="headline-sm text-primary mb-sm">Scalable Leadership and Next-Role Evidence</h3>
+        <p class="body-md text-on-surface-variant italic">Have you already demonstrated readiness for the next level &mdash; or only excelled at this one?</p>
+      </div>
+    </div>
+
+    <div class="bg-surface-tint rounded-lg p-xl md:p-2xl border border-border-strong">
+      <h3 class="headline-sm text-primary mb-lg">What you'll receive</h3>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-md">
+        <li class="flex items-start gap-sm">
+          <span class="material-symbols-outlined text-accent-decorative flex-shrink-0 mt-xs text-[20px] ms-filled">check_circle</span>
+          <span class="body-md text-on-surface">Your overall GCC Promotion Readiness Score (0&ndash;100)</span>
+        </li>
+        <li class="flex items-start gap-sm">
+          <span class="material-symbols-outlined text-accent-decorative flex-shrink-0 mt-xs text-[20px] ms-filled">check_circle</span>
+          <span class="body-md text-on-surface">Your strongest dimension of executive presence</span>
+        </li>
+        <li class="flex items-start gap-sm">
+          <span class="material-symbols-outlined text-accent-decorative flex-shrink-0 mt-xs text-[20px] ms-filled">check_circle</span>
+          <span class="body-md text-on-surface">Your primary promotion gap, named and explained</span>
+        </li>
+        <li class="flex items-start gap-sm">
+          <span class="material-symbols-outlined text-accent-decorative flex-shrink-0 mt-xs text-[20px] ms-filled">check_circle</span>
+          <span class="body-md text-on-surface">Three immediately actionable recommended actions</span>
+        </li>
+        <li class="flex items-start gap-sm md:col-span-2">
+          <span class="material-symbols-outlined text-accent-decorative flex-shrink-0 mt-xs text-[20px] ms-filled">check_circle</span>
+          <span class="body-md text-on-surface">A result interpretation calibrated to your specific career stage</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 4 — ABOUT DR. MUDIT SAXENA ============ -->
+<section id="about" class="w-full bg-surface-tint">
+  <div class="max-w-container mx-auto px-lg lg:px-2xl py-4xl">
+    <div class="mb-2xl text-center md:text-left max-w-3xl">
+      <p class="eyebrow text-accent-action mb-md">About the Founder</p>
+      <h2 class="headline-lg text-primary">Built by someone who sat in the chair.</h2>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-2xl lg:gap-3xl items-start">
+      <!-- Left: Photo + Credential Badges -->
+      <div class="lg:col-span-5 flex flex-col items-center">
+        <div class="relative mb-lg w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-white shadow-soft bg-white">
+          <img alt="Dr. Mudit Saxena" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLuJBKCgAMLXv1GLX_a74SZm7b4qAHbOVGTxlQSIkPmWjI5YirCcL3tauD4bmKpmzesQVJSYr_9TZebQxydR1zI6klEJmLyKnaxuET7PSr8fEqjD4pL84Zodss3-9JykHZgknHFvzH3OWs7FEUJssfMBG_ZNhHnTi833AXjGt3ZJ9A6P2YtDs1wp6uQgencBPWL4DgwnopVoMA2m8CxBCNK5HmR1rZiZIz0hVlrUjKiCTWTr7pWiIczJ2dE" />
+        </div>
+
+        <div class="bg-white border border-border rounded-lg p-lg w-full max-w-md shadow-card">
+          <h3 class="caption uppercase tracking-widest text-on-surface-variant text-center font-semibold mb-md">Leadership Coaching Credentials</h3>
+          <div class="flex justify-center gap-md">
+            <!-- Badge 1: ICF-PCC -->
+            <div class="relative w-16 h-20 flex items-center justify-center">
+              <svg class="w-full h-full drop-shadow-sm" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#FDE68A"/>
+                    <stop offset="60%" stop-color="#E5B15D"/>
+                    <stop offset="100%" stop-color="#B08035"/>
+                  </linearGradient>
+                </defs>
+                <path d="M50 0 L100 15 L100 70 C100 95 50 120 50 120 C50 120 0 95 0 70 L0 15 Z" fill="url(#goldGrad)" stroke="#8A5A20" stroke-width="1.5"/>
+              </svg>
+              <span class="absolute font-headline text-[11px] font-bold text-white text-center leading-tight drop-shadow">ICF<br/>PCC</span>
+            </div>
+            <!-- Badge 2: Trained by -->
+            <div class="relative w-16 h-20 flex items-center justify-center">
+              <svg class="w-full h-full drop-shadow-sm" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 0 L100 15 L100 70 C100 95 50 120 50 120 C50 120 0 95 0 70 L0 15 Z" fill="#283E78" stroke="#0D2761" stroke-width="1.5"/>
+              </svg>
+              <span class="absolute font-headline text-[9px] font-semibold text-white text-center leading-tight px-1">Trained by<br/>John<br/>Mattone</span>
+            </div>
+            <!-- Badge 3: TEDx -->
+            <div class="relative w-16 h-20 flex items-center justify-center">
+              <svg class="w-full h-full drop-shadow-sm" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 0 L100 15 L100 70 C100 95 50 120 50 120 C50 120 0 95 0 70 L0 15 Z" fill="#D2331E" stroke="#8A2A1D" stroke-width="1.5"/>
+              </svg>
+              <span class="absolute font-headline text-[10px] font-bold text-white text-center leading-tight">TEDx<br/>Speaker</span>
+            </div>
+            <!-- Badge 4: MBA -->
+            <div class="relative w-16 h-20 flex items-center justify-center">
+              <svg class="w-full h-full drop-shadow-sm" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 0 L100 15 L100 70 C100 95 50 120 50 120 C50 120 0 95 0 70 L0 15 Z" fill="#0D2761" stroke="#00174A" stroke-width="1.5"/>
+              </svg>
+              <span class="absolute font-headline text-[9px] font-semibold text-white text-center leading-tight px-1">MBA<br/>SPJIMR</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Details + Quote -->
+      <div class="lg:col-span-7 flex flex-col">
+        <p class="body-lg text-on-surface-variant mb-lg">
+          This diagnostic was developed by <span class="font-semibold text-primary">Dr. Mudit Saxena</span> &mdash; not as a general career quiz, but as a framework grounded in how promotions actually work inside India-based global centres.
+        </p>
+        <ul class="space-y-md mb-xl">
+          <li class="flex items-start gap-md">
+            <span class="material-symbols-outlined text-accent-decorative mt-xs text-[20px] ms-filled flex-shrink-0">check_circle</span>
+            <span class="body-lg text-on-surface">30+ years as a global CXO across five countries</span>
+          </li>
+          <li class="flex items-start gap-md">
+            <span class="material-symbols-outlined text-accent-decorative mt-xs text-[20px] ms-filled flex-shrink-0">check_circle</span>
+            <span class="body-lg text-on-surface">ICF-PCC certified &mdash; one of the highest coaching credentials awarded globally</span>
+          </li>
+          <li class="flex items-start gap-md">
+            <span class="material-symbols-outlined text-accent-decorative mt-xs text-[20px] ms-filled flex-shrink-0">check_circle</span>
+            <span class="body-lg text-on-surface">Trained personally by John Mattone, Steve Jobs' executive coach</span>
+          </li>
+          <li class="flex items-start gap-md">
+            <span class="material-symbols-outlined text-accent-decorative mt-xs text-[20px] ms-filled flex-shrink-0">check_circle</span>
+            <span class="body-lg text-on-surface">TEDx speaker &middot; MBA from SPJIMR</span>
+          </li>
+          <li class="flex items-start gap-md">
+            <span class="material-symbols-outlined text-accent-decorative mt-xs text-[20px] ms-filled flex-shrink-0">check_circle</span>
+            <span class="body-lg text-on-surface">10,000+ leaders coached across technology, finance, operations, risk, and enterprise functions</span>
+          </li>
+          <li class="flex items-start gap-md">
+            <span class="material-symbols-outlined text-accent-decorative mt-xs text-[20px] ms-filled flex-shrink-0">check_circle</span>
+            <span class="body-lg text-on-surface">Mentees now in CXO roles at Google, Barclays, Shell, JP Morgan, Citi and Reliance</span>
+          </li>
+        </ul>
+
+        <div class="bg-white rounded-lg p-xl border-l-4 border-accent-decorative shadow-card">
+          <p class="body-lg italic text-primary leading-relaxed">
+            &ldquo;He knows what a global VP looks for when reviewing a promotion slate. He knows because he was that VP for two decades &mdash; and because he has spent the last decade helping GCC leaders close the gap between strong performance and visible leadership.&rdquo;
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 5 — SOCIAL PROOF ============ -->
+<section id="proof" class="w-full">
+  <div class="max-w-container mx-auto px-lg lg:px-2xl py-4xl">
+    <div class="text-center mb-3xl max-w-3xl mx-auto">
+      <p class="eyebrow text-accent-action mb-md">Client Perspectives</p>
+      <h2 class="headline-lg text-primary">What GCC professionals say after working with Mudit.</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-lg max-w-5xl mx-auto">
+      <!-- Testimonial 1 -->
+      <div class="bg-white rounded-lg border border-border p-xl flex flex-col justify-between shadow-card">
+        <div>
+          <span class="text-[64px] leading-[32px] text-accent-decorative font-headline font-bold block mb-md">&ldquo;</span>
+          <p class="body-lg text-on-surface-variant italic mb-xl">What makes him stand out is the rare blend of real CXO experience and authentic coaching expertise. He focuses on both mindset and skill-building through action.</p>
+        </div>
+        <div class="flex items-center gap-md pt-lg border-t border-border">
+          <div class="w-14 h-14 rounded-full bg-primary-container flex items-center justify-center text-white font-headline font-semibold text-lg flex-shrink-0">SB</div>
+          <div>
+            <p class="font-headline font-bold text-primary">Sachin Badole</p>
+            <p class="caption text-on-surface-variant">Senior Director of Engineering, Tenstorrent</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="bg-white rounded-lg border border-border p-xl flex flex-col justify-between shadow-card">
+        <div>
+          <span class="text-[64px] leading-[32px] text-accent-decorative font-headline font-bold block mb-md">&ldquo;</span>
+          <p class="body-lg text-on-surface-variant italic mb-xl">There will be many blind spots in our career which we will be unaware of. His coaching took me from &lsquo;Unconscious Incompetence&rsquo; to &lsquo;Conscious Competence&rsquo; &mdash; a journey every aspiring CXO needs.</p>
+        </div>
+        <div class="flex items-center gap-md pt-lg border-t border-border">
+          <div class="w-14 h-14 rounded-full bg-primary-container flex items-center justify-center text-white font-headline font-semibold text-lg flex-shrink-0">MR</div>
+          <div>
+            <p class="font-headline font-bold text-primary">Mahesh Ranganatha</p>
+            <p class="caption text-on-surface-variant">SAP S/4 HANA Specialist</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="bg-white rounded-lg border border-border p-xl flex flex-col justify-between shadow-card">
+        <div>
+          <span class="text-[64px] leading-[32px] text-accent-decorative font-headline font-bold block mb-md">&ldquo;</span>
+          <p class="body-lg text-on-surface-variant italic mb-xl">I found myself unsure of how to translate technical skill into executive presence, influence, and income growth. His coaching helped me clarify my leadership narrative and command rooms with confidence.</p>
+        </div>
+        <div class="flex items-center gap-md pt-lg border-t border-border">
+          <div class="w-14 h-14 rounded-full bg-primary-container flex items-center justify-center text-white font-headline font-semibold text-lg flex-shrink-0">GB</div>
+          <div>
+            <p class="font-headline font-bold text-primary">Gautam Bhat</p>
+            <p class="caption text-on-surface-variant">Sr. Program Manager, SAP Ariba, Capgemini</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 4 -->
+      <div class="bg-white rounded-lg border border-border p-xl flex flex-col justify-between shadow-card">
+        <div>
+          <span class="text-[64px] leading-[32px] text-accent-decorative font-headline font-bold block mb-md">&ldquo;</span>
+          <p class="body-lg text-on-surface-variant italic mb-xl">He helped me gain clarity, build confidence, and take meaningful steps towards achieving my goals. Anyone who works with Mudit will benefit greatly.</p>
+        </div>
+        <div class="flex items-center gap-md pt-lg border-t border-border">
+          <div class="w-14 h-14 rounded-full bg-primary-container flex items-center justify-center text-white font-headline font-semibold text-lg flex-shrink-0">DK</div>
+          <div>
+            <p class="font-headline font-bold text-primary">Deepa K C</p>
+            <p class="caption text-on-surface-variant">Head of Infrastructure and Security</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 6 — FINAL CTA ============ -->
+<section id="final-cta" class="w-full bg-primary text-white">
+  <div class="max-w-container mx-auto px-lg lg:px-2xl py-4xl">
+    <div class="max-w-4xl mx-auto text-center flex flex-col gap-lg">
+      <p class="eyebrow text-accent-decorative">Two Choices</p>
+      <h2 class="headline-lg text-white">Start the diagnostic. It takes 5 minutes.</h2>
+      <p class="body-lg text-white/70 max-w-2xl mx-auto">Delivered across 15 questions in approximately 5 minutes. Confidential. No login required.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-lg max-w-4xl mx-auto mt-2xl">
+      <!-- Option A: Wait -->
+      <div class="bg-white/5 border border-white/10 rounded-lg p-xl">
+        <p class="eyebrow text-white/50 mb-md">Option A</p>
+        <h3 class="headline-sm text-white mb-md">Wait</h3>
+        <p class="body-md text-white/60">Hope the next review cycle is different. Keep delivering. Keep being overlooked. Watch another peer get promoted.</p>
+      </div>
+      <!-- Option B: Find out -->
+      <div class="bg-white text-on-surface border-2 border-accent-decorative rounded-lg p-xl shadow-soft">
+        <p class="eyebrow text-accent-action mb-md">Option B &middot; Recommended</p>
+        <h3 class="headline-sm text-primary mb-md">Find Out</h3>
+        <p class="body-md text-on-surface-variant mb-lg">Spend 5 minutes discovering exactly which of the 5 gaps is holding you back. Get a clear read on your GCC promotion readiness.</p>
+        <a href="#" class="inline-flex items-center justify-center w-full px-xl py-md bg-accent-action text-white label-bold rounded hover:bg-accent-action-hover transition shadow-soft">
+          Start the Free Diagnostic
+          <span class="material-symbols-outlined ml-sm text-[20px]">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="max-w-2xl mx-auto text-center mt-2xl flex flex-col gap-md">
+      <p class="caption text-white/60">
+        This diagnostic is designed for professionals earning &#8377;30 lakh to below &#8377;1 crore annually in a Global Capability Centre &mdash; across all functions. If you earn below &#8377;30L or above &#8377;1Cr, we'll direct you to a more appropriate pathway.
+      </p>
+      <div class="pt-md">
+        <a href="#" class="inline-flex items-center label-bold text-white hover:text-accent-decorative transition group">
+          Prefer a direct conversation? Apply for a confidential fit call
+          <span class="material-symbols-outlined ml-xs text-[18px] group-hover:translate-x-1 transition">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DISCLAIMER STRIP ============ -->
+<section class="w-full bg-surface-tint border-t border-border">
+  <div class="max-w-container mx-auto px-lg lg:px-2xl py-xl">
+    <p class="caption text-on-surface-variant italic text-center max-w-4xl mx-auto">
+      This is a research-informed developmental self-assessment based on your responses. It is not a psychometric test and does not predict or guarantee promotion, salary increases or career outcomes. Organisational structure, available roles, business conditions, sponsorship and timing may also affect career progression.
+    </p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="w-full bg-primary text-white/80">
+  <div class="max-w-container mx-auto px-lg lg:px-2xl py-3xl">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-2xl mb-2xl">
+      <div class="md:col-span-1">
+        <p class="headline-sm text-white mb-md">CXO Hive</p>
+        <p class="body-md text-white/60 mb-md">Coaching for the next generation of global leaders.</p>
+        <p class="caption text-white/50">Founder: Dr. Mudit Saxena &mdash; 30+ years global CXO, ICF-PCC certified, trained by John Mattone, TEDx speaker.</p>
+      </div>
+      <div>
+        <p class="label-bold uppercase text-white mb-md">Explore</p>
+        <ul class="space-y-sm">
+          <li><a href="#diagnostic" class="body-md text-white/70 hover:text-accent-decorative transition">The Diagnostic</a></li>
+          <li><a href="#about" class="body-md text-white/70 hover:text-accent-decorative transition">About Dr. Mudit</a></li>
+          <li><a href="#proof" class="body-md text-white/70 hover:text-accent-decorative transition">Testimonials</a></li>
+          <li><a href="#final-cta" class="body-md text-white/70 hover:text-accent-decorative transition">Start Diagnostic</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="label-bold uppercase text-white mb-md">Contact</p>
+        <ul class="space-y-sm">
+          <li class="flex items-center gap-sm">
+            <span class="material-symbols-outlined text-[18px] text-accent-decorative">mail</span>
+            <a href="mailto:mudit@cxohive.com" class="body-md text-white/70 hover:text-accent-decorative transition">mudit@cxohive.com</a>
+          </li>
+          <li class="flex items-center gap-sm">
+            <span class="material-symbols-outlined text-[18px] text-accent-decorative">language</span>
+            <a href="https://cxohive.com" class="body-md text-white/70 hover:text-accent-decorative transition">cxohive.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="pt-lg border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-md">
+      <p class="caption text-white/50">&copy; 2026 CXO Hive. All rights reserved.</p>
+      <div class="flex gap-lg">
+        <a href="#" class="caption text-white/50 hover:text-accent-decorative transition">Privacy Policy</a>
+        <a href="#" class="caption text-white/50 hover:text-accent-decorative transition">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
